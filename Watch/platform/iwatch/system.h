@@ -6,6 +6,7 @@
 void system_init();
 
 void system_rebootToNormal();
+void system_rebootToTest();
 uint8_t system_testing();
 uint8_t system_retail();
 void system_ready();
@@ -17,6 +18,7 @@ void system_reset();
 void system_restore();
 const uint8_t *system_getserial();
 void system_setemerging();
+uint8_t test_process(uint8_t ev, uint16_t lparam, void* rparam);
 
 extern struct pesistent_data
 {
@@ -27,6 +29,6 @@ extern struct pesistent_data
 	uint32_t step_dist;
 
 	struct datetime now;
-}globaldata;
+} globaldata;
 
 #endif

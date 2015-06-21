@@ -1,4 +1,4 @@
-IARPATH = "C:\Program Files\IAR Systems\Embedded Workbench 6.4 Evaluation\430"
+IARPATH = "C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.4 Evaluation\430"
 WINE    =
 CC      = $(IARPATH)/bin/icc430.exe
 LINK    = $(IARPATH)/bin/xlink.exe
@@ -6,7 +6,7 @@ LIB     = $(IARPATH)/bin/xlib.exe
 ECHO	= echo
 
 BUILDNUM = buildnum
-FWVERSION ="1.0.0.$$(cat $(BUILDNUM))"
+FWVERSION ="1.0.1.$$(cat $(BUILDNUM))"
 
 IGNORE_WARNINGS=Pa050
 
@@ -56,12 +56,12 @@ PLATFORM = \
 	platform/iwatch/i2c.c \
 	platform/iwatch/isr.c \
 	platform/iwatch/msp430.c \
-  platform/iwatch/contiki-exp5438-main.c \
+    platform/iwatch/contiki-exp5438-main.c \
 	platform/iwatch/rtc.c \
-  platform/iwatch/spiflash.c \
-  platform/iwatch/printf.c \
-  platform/iwatch/system.c \
-  platform/iwatch/progam.c \
+    platform/iwatch/spiflash.c \
+    platform/iwatch/printf.c \
+    platform/iwatch/system.c \
+    platform/iwatch/progam.c \
 	platform/iwatch/rtimer-arch.c \
 	platform/iwatch/uart1-putchar.c \
 	platform/iwatch/watchdog.c \
@@ -114,14 +114,14 @@ BTSTACK0 = \
 	hal.c \
 	hal_compat.c \
 	hal_uart_dma.c \
-  bt_init.c
+	bt_init.c
 
 BTSTACK1 = \
 	ble/att.c \
-  ble/att_client.c \
-  ble/att_server.c \
-  ble/central_device_db_memory.c \
-  ble/sm.c \
+	ble/att_client.c \
+	ble/att_server.c \
+	ble/central_device_db_memory.c \
+	ble/sm.c \
 	chipset-cc256x/bluetooth_init_cc2564_2.10.c \
 	chipset-cc256x/bt_control_cc256x.c \
 	src/avctp.c \
@@ -195,6 +195,7 @@ WATCH = \
     watch/btconfig.c \
     watch/upgrade.c \
     watch/reset.c \
+    watch/reboot.c \
     watch/sleep.c \
     watch/test.c \
     watch/siri.c \

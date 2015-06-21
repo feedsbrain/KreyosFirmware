@@ -150,7 +150,12 @@ uint8_t system_testing()
 
 void system_rebootToNormal()
 {
+	// NOOP
+}
 
+void system_rebootToTest()
+{
+	// NOOP
 }
 
 int mpu6050_selftest()

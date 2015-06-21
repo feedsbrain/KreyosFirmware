@@ -1,5 +1,5 @@
 ifeq ($(MSPPATH),)
-MSPPATH = /home/junsu/mspgccx/bin
+MSPPATH = "c:\ti\gcc\bin"
 endif
 CC      = clang 
 OBJCOPY = objcopy
@@ -119,6 +119,7 @@ WATCH = \
     watch/host.c \
     watch/today.c \
     watch/reset.c \
+    watch/reboot.c \
     watch/siri.c \
     watch/status.c \
     watch/test.c \
